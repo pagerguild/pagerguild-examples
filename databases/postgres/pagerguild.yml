@@ -1,0 +1,9 @@
+databaseType: Postgres
+# or
+#databaseType: Postgres 16
+#databaseType: Postgres 15
+#databaseType: PostgreSQL 16.2.0
+# etc.
+
+paths:
+  - migrations
