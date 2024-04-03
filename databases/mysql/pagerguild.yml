@@ -1,0 +1,7 @@
+databaseType: MySQL
+# or
+#databaseType: MySQL 8
+# etc.
+
+paths:
+  - migrations

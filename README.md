@@ -10,3 +10,4 @@ PagerGuild works on your stack.
 ### Databases
 
 - [Postgres](databases/postgres/README.md)
+- [MySQL](databases/mysql/README.md)
