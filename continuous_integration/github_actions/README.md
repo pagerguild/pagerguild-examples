@@ -1,10 +1,10 @@
 # PagerGuild on Github Actions
 
-# Installation
+# Configuration
 
-- Install the PagerGuild Github Action
+- Define database type
 
-  - Copy-paste the [pagerguild_review.yml](pagerguild_review.yml) workflow file into your repository's `.github/workflows/` folder
+  - In the PagerGuild configuration file [`pagerguild.yml`](pagerguild.yml), set the `databaseType` field to the name and version of your production database. See [databases](../../databases/) for additional information.
 
 - Configure access keys
 
