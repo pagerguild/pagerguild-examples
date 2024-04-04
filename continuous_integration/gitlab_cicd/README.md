@@ -1,10 +1,10 @@
 # PagerGuild on GitLab CI/CD
 
-# Installation
+# Configuration
 
-- Install the PagerGuild GitLab CI/CD pipeline
+- Define database type
 
-  - Copy-paste the [.gitlab-ci.yml](.gitlab-ci.yml) pipeline file, or contents, into `/.gitlab-ci.yml`
+  - In the PagerGuild configuration file [`pagerguild.yml`](pagerguild.yml), set the `databaseType` field to the name and version of your production database. See [databases](../../databases/) for additional information.
 
 - Configure access keys
 
