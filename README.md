@@ -4,10 +4,10 @@ PagerGuild works on your stack.
 
 ### Continuous Integration
 
-- [GitHub Actions](continuous_integration/github_actions/README.md)
-- [GitLab CI/CD](continuous_integration/gitlab_cicd/README.md)
+- [GitHub Actions](continuous_integration/github_actions/)
+- [GitLab CI/CD](continuous_integration/gitlab_cicd/)
 
 ### Databases
 
-- [Postgres](databases/postgres/README.md)
-- [MySQL](databases/mysql/README.md)
+- [Postgres](databases/postgres/)
+- [MySQL](databases/mysql/)
