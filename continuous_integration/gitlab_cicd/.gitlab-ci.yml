@@ -1,14 +1,29 @@
 cache:
-  key: "${CI_COMMIT_REF_SLUG}"
-  paths:
-    - pagerguild.db
+  - key: pagerguild.db
+    paths:
+      - pagerguild-base.db
+  - key: "${CI_COMMIT_REF_SLUG}"
+    paths:
+      - pagerguild.db
 
 pagerguild_review:
   image: docker
   services:
     - docker:dind
   script:
-    - echo "PagerGuild reviewing migrations..."
-    - docker run -e OPENAI_API_KEY -e GITLAB_TOKEN -e GITLAB_CI -e CI_PIPELINE_SOURCE -e CI_MERGE_REQUEST_IID -e CI_PROJECT_NAME -e CI_PROJECT_ROOT_NAMESPACE -e CI_MERGE_REQUEST_SOURCE_BRANCH_NAME -e CI_MERGE_REQUEST_TARGET_BRANCH_NAME -v $PWD:/src/ pagerguild/pagerguild:latest scan
+  script:
+    - |
+      docker run \
+        -e OPENAI_API_KEY \
+        -e GITLAB_TOKEN \
+        -e GITLAB_CI \
+        -e CI_PIPELINE_SOURCE \
+        -e CI_MERGE_REQUEST_IID \
+        -e CI_PROJECT_NAME \
+        -e CI_PROJECT_ROOT_NAMESPACE \
+        -e CI_MERGE_REQUEST_SOURCE_BRANCH_NAME \
+        -e CI_MERGE_REQUEST_TARGET_BRANCH_NAME \
+        -v $PWD:/src/ \
+        pagerguild/pagerguild:latest scan
   only:
     - merge_requests
